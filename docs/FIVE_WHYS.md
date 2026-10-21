@@ -1,9 +1,13 @@
-# 5 Whys: why do complex conversations still break Hubtype bots?
+# 5 Whys: why do complex conversations still fall over to humans?
 
-1. Why do complex issues fall over to humans? Because bots handle one intent at a time and lose the thread when a customer stacks requests.
-2. Why do they lose the thread? Because journeys are designed as single-purpose flows, and state from flow A doesn't carry into flow B.
-3. Why doesn't state carry? Because each vertical journey is custom-built per client during a 6-8 week services project - there is no shared, reusable journey layer.
-4. Why is there no shared layer? Because the business sells enterprise projects, not productised verticals; every client is a new build.
-5. Why sell projects, not products? Because the go-to-market targets enterprises only - no self-serve packaging, no published pricing, so the mid-market was never a customer worth building reusable product for.
+Starting point (G2 review on AWS Marketplace): "more complex issues might still require human intervention."
 
-Root cause: a services-led GTM produced bespoke flows instead of a productised vertical layer. Fix both at once: a vertical agent template with cross-intent state and confidence-scored handoff, sold self-serve at published prices.
+1. **Why do complex issues fall over to humans?** My hypothesis: the bot handles one intent at a time and loses the thread when a customer stacks requests (claim, then policy change, then a voice note).
+2. **Why does it lose the thread?** Journeys tend to be built as single-purpose flows, so state captured in flow A isn't available to flow B.
+3. **Why doesn't state carry?** Each client's journeys are built during a team-led launch (Capterra: 6-8 weeks, "backed by a highly skilled team"), so there's no shared, reusable journey layer per vertical.
+4. **Why is there no shared layer?** The business sells enterprise projects rather than productised verticals, so each client is a new build.
+5. **Why projects, not products?** The go-to-market targets enterprise buyers only. With no self-serve packaging or published pricing, the mid-market never became a segment worth building reusable product for.
+
+**Root cause I'm designing for:** a services-led go-to-market produced bespoke flows instead of a productised vertical layer.
+
+**What I'd do:** fix both ends at once. A vertical template with cross-intent state and confidence-scored handoff, sold self-serve at published prices. Steps 1-2 are hypotheses from the outside; the first thing I'd do in the seat is check them against real Hubtype transcripts.

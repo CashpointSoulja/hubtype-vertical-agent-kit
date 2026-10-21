@@ -1,15 +1,17 @@
-# Metrics that would govern this product
+# Metrics I'd use to run this product
 
 ## North star
-Resolved-in-one-thread rate: % of multi-intent conversations completed (by agent or agent+human) without the customer repeating information.
+**Resolved-in-one-thread rate:** % of multi-intent conversations completed, by the agent alone or agent plus human, without the customer repeating information.
 
-## Guardrails and inputs
-- Containment quality, not just containment rate: % of conversations the agent completes that it *should* have completed (audited weekly).
-- Handoff precision: % of handoffs triggered at the right moment (not too early = wasted human time; not too late = compliance risk on injury/regulated intents).
-- Context-carry score: agent-side QA check that every entity captured pre-handoff appears in the human's context card.
-- Time-to-launch: days from signup to live agent (target: 2, vs 42-56 today).
-- Template attach rate: % of new mid-market accounts launched from a vertical template vs custom build.
-- Expansion: conversations/mo growth per account; upgrade rate Starter -> Growth.
+## Inputs and guardrails
+- **Containment quality, not just containment rate:** % of AI-completed conversations that the AI *should* have completed, from a weekly audited sample.
+- **Handoff precision:** % of handoffs triggered at the right moment. Too early wastes human time; too late is a compliance risk on injury and regulated intents.
+- **Handoff recall on mandatory-human topics:** % of injury or regulated mentions that triggered a handoff. Target 100%; anything less is an incident.
+- **Context-carry score:** QA check that every entity captured before handoff appears on the human's context card.
+- **Human time-to-first-reply after handoff:** the speed metric that answers the "service is slow" review.
+- **Time-to-launch:** days from signup to live agent. Target 2, against the 6-8 weeks Capterra describes today.
+- **Template attach rate:** % of new mid-market accounts launched from a vertical template rather than a custom build.
+- **Expansion:** conversations per account over time; Starter to Growth upgrade rate.
 
-## What the demo asserts (sample data only)
-The demo's claims are qualitative: multi-intent state carry, voice-note transcription into structured claim data, confidence-scored escalation. No performance numbers are stated as real anywhere in the artifact.
+## What the demo shows
+The demo is scripted with sample data. Its confidence scores (0.90-0.97 for routine turns, 0.61 on the injury turn) and timings are illustrative, not measured. Nothing in the artifact is presented as a real performance result; the only real numbers are quoted from cited Hubtype, G2, Capterra and Aries pages.

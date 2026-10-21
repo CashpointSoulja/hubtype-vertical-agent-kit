@@ -1,24 +1,23 @@
-# Hubtype design scrape (21 Oct 2026, hubtype.com live site)
+# Hubtype design scrape
 
-Source: hubtype.com homepage and platform page, fetched 21 Oct 2026.
+Source: hubtype.com homepage and its Webflow stylesheet, fetched 21 Oct 2026.
 
-## Brand assets
-- Logo (literal, black on light): `assets/hubtype-logo.svg` pulled from their CDN (cdn.prod.website-files.com/.../67d1e549fd69d8792eb8424a_hubtype-logo-black.svg). White variant made by CSS filter `brightness(0) invert(1)` on dark surfaces.
-- Primary purple: #200066 (dominant brand colour, used 26 times in homepage CSS).
-- Page background: #F8F8FA.
-- Accent green: #27D045 (used sparingly; WhatsApp adjacency).
-- Typography: clean geometric sans (Inter / Segoe UI stack as stand-in).
+## Brand assets (verified)
+- **Logo:** `assets/hubtype-logo.svg` is a byte-identical copy of the logo on Hubtype's CDN (`cdn.prod.website-files.com/67d188e7beaa8de43bd46fc0/67d1e549fd69d8792eb8424a_hubtype-logo-black.svg`; MD5 matched). On dark surfaces I invert it with CSS `filter: brightness(0) invert(1)`.
+- **Primary purple:** #200066.
+- **Page background:** #F8F8FA.
+- **Typeface:** Inter. Hubtype's stylesheet sets both `--_typography---heading` and `--_typography---body` to `Inter, Arial, sans-serif`. The demo loads Inter from Google Fonts with the same fallback.
+- **Accent green:** #27D045, used sparingly.
 
-## Product surface observed
-- Homepage hero: "AI Agents for WhatsApp & Business Messaging" - design, launch, manage AI agents, enterprise-grade security.
-- Platform pillars shown: visual journey editor, agent workspace ("manage every interaction"), analytics ("spot where customers get stuck").
-- Proof: 80-85% automated interactions (Austral, unnamed contact centre), 107% Trustpilot lift; logos: Securitas Direct, Allianz, Decathlon, Mango, Levi's, Michael Kors, Volkswagen, Zurich, Wizz Air, easyJet, Air Europa, JetSmart, TMB.
-- Security posture: ISO 27001, end-to-end encryption, SSL webhooks.
-- Claims: "80% bot compliance", "2X CSAT", integrations with Contentful, Salesforce, Zendesk.
+## Product surface observed on hubtype.com
+- Positioning: AI agents for WhatsApp and business messaging; design, launch and manage AI agents with enterprise-grade security.
+- Platform pillars: visual journey editor, agent workspace, analytics.
+- Proof points on the page: Austral case study ("we've automated 85% of our WhatsApp interactions"), "80% bot compliance" from industry-specific interactive elements.
+- Customer logos include Allianz, Decathlon and Volkswagen, among others.
+- No public pricing page found.
 
-## Visual guide (applied in the demo)
-- Logo owns top-left, literal mark.
-- Purple #200066 for headers, workspace chrome, key CTAs.
-- Light #F8F8FA page background, white cards, 14-18px radius, soft purple-tinted shadows.
-- WhatsApp phone frame kept true to WhatsApp UI (#075e54 header, #d9fdd3 outgoing, #e5ddd2 chat bg) because the demo's subject is the WhatsApp experience itself.
-- Workspace panel mirrors Hubtype's "clean, visual, easy-to-use workspace" claim: handoff context card, intent chips, confidence pill, one primary action.
+## Visual guide applied in the demo
+- Literal logo owns the top-left of the header.
+- #200066 for hero, workspace chrome, headings and primary buttons; #F8F8FA page background; white cards with 14-18px radius and soft purple-tinted shadows.
+- The phone frame stays true to WhatsApp (#075e54 header, #d9fdd3 outgoing bubbles, beige chat background) because the subject is the WhatsApp experience itself. The customer's own messages are on the right in green, the business on the left, as on Sofia's phone.
+- The workspace panel follows Hubtype's "agent workspace" pillar: live turn signals with a visible 0.75 threshold, then one context card with a single primary action.
