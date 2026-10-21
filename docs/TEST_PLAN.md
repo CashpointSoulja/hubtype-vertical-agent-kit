@@ -38,6 +38,9 @@ Screenshots from the run are saved in `tests/screenshots/`.
 - **Visual check of screenshots:** the confidence bars in the workspace rendered at zero width (inline element). I fixed it in CSS and re-ran.
 - **Final run: 24/24.**
 
+## Live deployment run: 21 Oct 2026, https://hubtype-vertical-agent-kit.pages.dev, 24/24 passed
+I ran the same suite against the production Cloudflare Pages URL after deploying. Every observed value matched the local run above, with 0 console errors in every scenario.
+
 ## Known limits
 - Desktop and mobile Chromium only; I didn't run Safari or Firefox.
 - T18 depends on third-party pages staying online and unchanged.
